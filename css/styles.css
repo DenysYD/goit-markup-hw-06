@@ -501,7 +501,6 @@ body {
 /* FOOTER */
 address {
     font-style: normal;
-    margin-right: 70px;
 }
 
 .end {
@@ -570,8 +569,6 @@ address {
 .footer-modal {
     width: 570px;
     height: 86px;
-    left: 815px;
-    top: 2748px;
 }
 
 .footer-form {
@@ -592,6 +589,7 @@ address {
 
 
 .footer-form-input {
+    font-size: 12px;
     width: 358px;
     height: 50px;
     left: 815px;
@@ -630,6 +628,10 @@ address {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-color: transparent;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    cursor: pointer;
     color: #fff;
     transition: background-color var(--timing-functione);
 
@@ -831,13 +833,9 @@ address {
     position: absolute;
     top: 50%;
     left: 50%;
-
     width: 528px;
-    height: 581px;
-    padding: 30px;
-
-    background-color: #fff;
-
+    padding: 40px;
+    background-color: var(--primari-text-color-teme-dark);
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms var(--timing-functione);
 }
@@ -846,15 +844,18 @@ address {
     position: absolute;
     top: 8px;
     right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: #fff;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    
+    transition: fill var(--timing-functione);
 }
 
 .close-button:hover,
@@ -995,10 +996,14 @@ address {
     display: none;
 }
 
-.modal-form-check:focus+.modal-form-own-check,
-.modal-form-check:focus+.modal-form-own-checkbox {
+.modal-form-check:focus+.modal-form-own-check {
     box-shadow: 0 0 0 2px rgba(81, 43, 250, 0.5);
 }
+
+.modal-form-check:focus~.modal-form-own-checkbox {
+    fill: var(--accent-color);
+}
+
 
 .modal-form-field-desc-checkbox {
     display: flex;
@@ -1018,7 +1023,7 @@ address {
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-decoration-line: underline solid;
-
+    text-decoration: none;
 
     color: var(--accent-color);
 }
