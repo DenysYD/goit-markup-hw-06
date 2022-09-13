@@ -633,6 +633,7 @@ address {
     line-height: 1.87;
     cursor: pointer;
     color: #fff;
+    letter-spacing: 0.06em;
     transition: background-color var(--timing-functione);
 
 }
@@ -1023,10 +1024,13 @@ address {
     line-height: 1.71;
     letter-spacing: 0.03em;
     text-decoration-line: underline solid;
-    text-decoration: none;
 
     color: var(--accent-color);
 }
+
+.modal-form-field-desc-checkbox-link:hover,
+.modal-form-field-desc-checkbox-link:focus {
+    text-decoration: none;}
 
 .modal-form-submit {
     width: 200px;
